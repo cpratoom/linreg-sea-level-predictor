@@ -19,6 +19,7 @@ def draw_plot():
     ax.set_title('Rise in Sea Level', fontsize=14)
     
     x = np.arange(1850, 2055)
+    idx = np.where(x==2050)[0][0]
     
     # Create first line of best fit
     slope1, intercept1, r_value, p_value, std_err = linregress(df['Year'], df['CSIRO Adjusted Sea Level'])
